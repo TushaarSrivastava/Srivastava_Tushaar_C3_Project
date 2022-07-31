@@ -66,4 +66,15 @@ class RestaurantTest {
     }
 
     //<<<<<<<<<<<<<<<<<<<<<<<MENU>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+    @Test
+    public void selecting_items_in_menu_should_return_total_cost() {
+        int testTotal = 0;
+        List<String> mySelection = new ArrayList<>();
+        mySelection.add("Apple Juice");
+        mySelection.add("Mango Juice");
+
+        assertEquals(80, restaurant.calculateOrderTotal(mySelection));
+
+
+    }
 }
